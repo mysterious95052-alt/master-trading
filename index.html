@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Market Vision — Master Smart Money Concepts, CRT & 4H Candle Range Strategy. Premium trading education for aspiring institutional-level traders.">
+    <meta name="keywords" content="trading education, SMC, smart money concepts, CRT strategy, 4H candle range, forex, trading course">
+    <meta name="author" content="Market Vision Education">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Market Vision | Premium Trading Education">
+    <meta property="og:description" content="Master Smart Money Concepts. Stop being retail liquidity.">
+    <meta property="og:type" content="website">
+    <title>Market Vision | Premium Trading Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- CANVAS PARTICLE BACKGROUND                    -->
+    <!-- ============================================ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav id="main-nav" class="nav">
+        <div class="nav__container">
+            <a href="#" class="nav__logo">
+                Market<span>Vision</span>
+            </a>
+
+            <div class="nav__links" id="nav-links">
+                <a href="#about" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
+                <a href="#programs" class="nav__link" onclick="closeMobileMenu()">Programs</a>
+                <a href="#results" class="nav__link" onclick="closeMobileMenu()">Results</a>
+                <a href="#mentor" class="nav__link" onclick="closeMobileMenu()">Mentor</a>
+                <a href="#faq" class="nav__link" onclick="closeMobileMenu()">FAQ</a>
+            </div>
+
+            <a href="#apply" class="nav__cta">Apply Now</a>
+
+            <button class="nav__hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                  -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+
+        <div class="hero__content">
+            <div class="hero__badge reveal-up">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Limited Seats — Next Batch Starting Soon</span>
+            </div>
+
+            <h1 class="hero__title reveal-up" style="--delay: 0.1s;">
+                Learn How <span class="text-gold-gradient">Smart Money</span><br>
+                Trades the Market
+            </h1>
+
+            <p class="hero__subtitle reveal-up" style="--delay: 0.2s;">
+                Master SMC, CRT & the 4H Candle Range Strategy. Build a high-performance 
+                trading system and stop being retail liquidity.
+            </p>
+
+            <div class="hero__actions reveal-up" style="--delay: 0.3s;">
+                <a href="#apply" class="btn btn--primary btn--lg btn--glow">
+                    <span>Start Your Journey</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#programs" class="btn btn--glass btn--lg">
+                    <span>View Programs</span>
+                </a>
+            </div>
+
+            <div class="hero__trust reveal-up" style="--delay: 0.4s;">
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Verified Mentor</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>500+ Students</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.9/5 Rating</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-mouse">
+                <div class="hero__scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS BAR                                     -->
+    <!-- ============================================ -->
+    <section class="stats">
+        <div class="stats__container">
+            <div class="stat reveal-up">
+                <div class="stat__number" data-target="500">0</div>
+                <div class="stat__suffix">+</div>
+                <div class="stat__label">Students Trained</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.1s;">
+                <div class="stat__number" data-target="89">0</div>
+                <div class="stat__suffix">%</div>
+                <div class="stat__label">Success Rate</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.2s;">
+                <div class="stat__number" data-target="3">0</div>
+                <div class="stat__suffix">+</div>
+                <div class="stat__label">Years Teaching</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.3s;">
+                <div class="stat__number" data-target="15">0</div>
+                <div class="stat__suffix">K+</div>
+                <div class="stat__label">Community Members</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ABOUT / THE EDGE                              -->
+    <!-- ============================================ -->
+    <section id="about" class="about">
+        <div class="about__container">
+            <!-- Problem Side -->
+            <div class="about__problem reveal-left">
+                <div class="section-label section-label--danger">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    The Problem
+                </div>
+                <h2 class="about__title">
+                    Why Retail Traders <span class="text-danger">Fail</span>
+                </h2>
+
+                <div class="about__cards">
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+                        </div>
+                        <div>
+                            <h4>Stop Hunts & Losing Trades</h4>
+                            <p>Trading retail patterns puts your stops exactly where institutions need liquidity to fill their orders.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4>Lagging Indicators</h4>
+                            <p>RSI, MACD, and moving averages show you what already happened — not what smart money is planning next.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4>Emotional Trading</h4>
+                            <p>Without a structured framework, you rely on gut feeling and repeat the same mistakes every session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Side -->
+            <div class="about__solution reveal-right">
+                <div class="section-label section-label--success">
+                    <i class="fa-solid fa-check-circle"></i>
+                    The Solution
+                </div>
+                <h2 class="about__title">
+                    Trade Like <span class="text-gold">Institutions</span>
+                </h2>
+
+                <div class="about__cards">
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div>
+                            <h4>Smart Money Concepts (SMC)</h4>
+                            <p>Understand order blocks, liquidity sweeps, and institutional order flow to trade with — not against — the market movers.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h4>CRT Strategy Framework</h4>
+                            <p>A systematic approach to reading candle ranges and time-based liquidity patterns for high-probability setups.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4>4H Candle Range Precision</h4>
+                            <p>Master the 4-hour candle mapping technique to identify high-probability entries with tight risk management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROGRAMS                                      -->
+    <!-- ============================================ -->
+    <section id="programs" class="programs">
+        <div class="programs__container">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-gem"></i>
+                    What We Offer
+                </div>
+                <h2 class="section-title">
+                    Elite <span class="text-gold-gradient">Programs</span>
+                </h2>
+                <p class="section-desc">Choose the path that matches your trading journey. Every program includes lifetime community access.</p>
+            </div>
+
+            <div class="programs__grid">
+                <!-- Program 1 -->
+                <div class="program-card reveal-up" style="--delay: 0s;">
+                    <div class="program-card__badge">Foundation</div>
+                    <div class="program-card__header">
+                        <div class="program-card__icon">
+                            <i class="fa-solid fa-chart-candlestick" style="font-size: 1.5rem;"></i>
+                            <i class="fa-solid fa-clock" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 class="program-card__title">4H Candle Range</h3>
+                        <p class="program-card__subtitle">Master time-based liquidity and precision entries using the 4-hour candle range mapping system.</p>
+                    </div>
+                    <div class="program-card__features">
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>4H Range Mapping System</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Entry & Exit Frameworks</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Risk Management Templates</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>10+ Video Lessons</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Telegram Community Access</span>
+                        </div>
+                    </div>
+                    <div class="program-card__footer">
+                        <div class="program-card__price">
+                            <span class="program-card__currency">₹</span>40,000
+                        </div>
+                        <button onclick="selectCourse('4H Candle Range Strategy', 40000)" class="btn btn--outline btn--full">
+                            <span>Apply Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program 2 (Featured) -->
+                <div class="program-card program-card--featured reveal-up" style="--delay: 0.1s;">
+                    <div class="program-card__popular">
+                        <i class="fa-solid fa-fire"></i> Most Popular
+                    </div>
+                    <div class="program-card__badge program-card__badge--gold">Advanced</div>
+                    <div class="program-card__header">
+                        <div class="program-card__icon program-card__icon--gold">
+                            <i class="fa-solid fa-building-columns" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 class="program-card__title program-card__title--gold">SMC Mastery</h3>
+                        <p class="program-card__subtitle">The complete Smart Money Concepts program. Learn to read institutional order flow and trade like the big players.</p>
+                    </div>
+                    <div class="program-card__features">
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Full SMC Framework</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Order Blocks & Liquidity</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Break of Structure Analysis</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>25+ Video Lessons</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Live Trade Reviews (Weekly)</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>1-on-1 Mentorship Sessions</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Premium Community Access</span>
+                        </div>
+                    </div>
+                    <div class="program-card__footer">
+                        <div class="program-card__price program-card__price--gold">
+                            <span class="program-card__currency">₹</span>60,000
+                        </div>
+                        <button onclick="selectCourse('SMC Mastery Program', 60000)" class="btn btn--primary btn--full btn--glow">
+                            <span>Apply Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="program-card reveal-up" style="--delay: 0.2s;">
+                    <div class="program-card__badge">Intermediate</div>
+                    <div class="program-card__header">
+                        <div class="program-card__icon">
+                            <i class="fa-solid fa-rotate" style="font-size: 1.5rem;"></i>
+                        </div>
+                        <h3 class="program-card__title">CRT Strategy</h3>
+                        <p class="program-card__subtitle">Deep dive into Candle Range Theory. Build systematic setups using time and price-based liquidity models.</p>
+                    </div>
+                    <div class="program-card__features">
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Complete CRT Framework</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Time-Based Liquidity Models</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Multi-Timeframe Analysis</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>15+ Video Lessons</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Trade Journal Templates</span>
+                        </div>
+                        <div class="program-card__feature">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Premium Community Access</span>
+                        </div>
+                    </div>
+                    <div class="program-card__footer">
+                        <div class="program-card__price">
+                            <span class="program-card__currency">₹</span>50,000
+                        </div>
+                        <button onclick="selectCourse('CRT Strategy Program', 50000)" class="btn btn--outline btn--full">
+                            <span>Apply Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- RESULTS / TESTIMONIALS                        -->
+    <!-- ============================================ -->
+    <section id="results" class="results">
+        <div class="results__container">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-trophy"></i>
+                    Social Proof
+                </div>
+                <h2 class="section-title">
+                    What Our <span class="text-gold-gradient">Students Say</span>
+                </h2>
+                <p class="section-desc">Real transformations from traders who committed to the process.</p>
+            </div>
+
+            <div class="testimonials__grid">
+                <div class="testimonial-card reveal-up" style="--delay: 0s;">
+                    <div class="testimonial-card__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">"Before joining, I was blowing accounts every few months. The SMC framework completely changed how I see the market. I'm now consistently profitable for 8 months straight."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">RA</div>
+                        <div>
+                            <div class="testimonial-card__name">Rohan A.</div>
+                            <div class="testimonial-card__role">SMC Mastery Graduate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-up" style="--delay: 0.1s;">
+                    <div class="testimonial-card__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">"The 4H Candle Range strategy alone gave me an edge I never had. My win rate went from 35% to 68% in just 3 months. The community support is incredible."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">PS</div>
+                        <div>
+                            <div class="testimonial-card__name">Priya S.</div>
+                            <div class="testimonial-card__role">4H Range Graduate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal-up" style="--delay: 0.2s;">
+                    <div class="testimonial-card__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">"The CRT strategy opened my eyes to how time-based liquidity really works. I now have a systematic approach instead of random entries. Best investment I've made."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">VK</div>
+                        <div>
+                            <div class="testimonial-card__name">Vikram K.</div>
+                            <div class="testimonial-card__role">CRT Strategy Graduate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- MENTOR                                        -->
+    <!-- ============================================ -->
+    <section id="mentor" class="mentor">
+        <div class="mentor__container">
+            <div class="mentor__content reveal-left">
+                <div class="section-label">
+                    <i class="fa-solid fa-user-tie"></i>
+                    Your Mentor
+                </div>
+                <h2 class="section-title" style="text-align: left;">
+                    Learn from a <span class="text-gold-gradient">Real Trader</span>
+                </h2>
+                <p class="mentor__bio">
+                    With over 3 years of live market experience and 500+ students mentored, 
+                    your instructor doesn't just teach theory — they trade live, every single day.
+                </p>
+                <div class="mentor__stats">
+                    <div class="mentor__stat">
+                        <div class="mentor__stat-value">3+</div>
+                        <div class="mentor__stat-label">Years Trading</div>
+                    </div>
+                    <div class="mentor__stat">
+                        <div class="mentor__stat-value">500+</div>
+                        <div class="mentor__stat-label">Students</div>
+                    </div>
+                    <div class="mentor__stat">
+                        <div class="mentor__stat-value">4.9</div>
+                        <div class="mentor__stat-label">Avg Rating</div>
+                    </div>
+                </div>
+                <div class="mentor__highlights">
+                    <div class="mentor__highlight">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Live trading every session — not just theory</span>
+                    </div>
+                    <div class="mentor__highlight">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Verified track record with documented results</span>
+                    </div>
+                    <div class="mentor__highlight">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Personalized feedback on your trade setups</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mentor__visual reveal-right">
+                <div class="mentor__card">
+                    <div class="mentor__card-glow"></div>
+                    <div class="mentor__card-avatar">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="mentor__card-name">Market Vision</div>
+                    <div class="mentor__card-title">Lead Instructor & Trader</div>
+                    <div class="mentor__card-badges">
+                        <span class="mentor__card-badge"><i class="fa-solid fa-certificate"></i> Certified</span>
+                        <span class="mentor__card-badge"><i class="fa-solid fa-chart-line"></i> Active Trader</span>
+                    </div>
+                    <div class="mentor__card-quote">
+                        "I don't teach indicators. I teach you how to read the market the way institutions do."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FAQ                                           -->
+    <!-- ============================================ -->
+    <section id="faq" class="faq">
+        <div class="faq__container">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-circle-question"></i>
+                    FAQ
+                </div>
+                <h2 class="section-title">
+                    Common <span class="text-gold-gradient">Questions</span>
+                </h2>
+            </div>
+
+            <div class="faq__list">
+                <div class="faq__item reveal-up" style="--delay: 0s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Who is this program for?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>This program is designed for serious traders — whether you're a beginner who wants to start right, or an intermediate trader tired of losing money with retail strategies. If you're willing to put in the work and study institutional frameworks, this is for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.05s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Do I need prior trading experience?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>The 4H Candle Range program is beginner-friendly. For SMC Mastery and CRT Strategy, basic knowledge of candlestick charts and market structure is recommended but not strictly required — we cover fundamentals in the first module.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.1s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>How are lessons delivered?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>All lessons are pre-recorded HD videos accessible 24/7 on our private platform. SMC Mastery students also get weekly live trade review sessions. All programs include lifetime access to the Telegram community.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.15s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Is there a refund policy?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>We offer a 7-day refund if you've watched less than 20% of the course content and are unsatisfied. After that, all sales are final. We're confident in the value — over 89% of our students report measurable improvement.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.2s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Which markets does this apply to?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>SMC and CRT principles apply across all liquid markets — Forex, Indian equities (NSE/BSE), commodities, crypto, and indices. The concepts are universal because they're based on how institutional order flow works.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- APPLICATION / PAYMENT                         -->
+    <!-- ============================================ -->
+    <section id="apply" class="apply">
+        <div class="apply__container">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Secure Your <span class="text-gold-gradient">Seat</span></h2>
+                <div class="apply__timer" id="urgency-timer">
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="timer-text">Offer expires in: 15:00</span>
+                </div>
+            </div>
+
+            <div class="apply__card reveal-up" style="--delay: 0.1s;">
+                <!-- Step Tabs -->
+                <div class="apply__tabs">
+                    <div class="apply__tab apply__tab--active" id="tab-1">
+                        <span class="apply__tab-num">1</span>
+                        <span class="apply__tab-text">Your Details</span>
+                    </div>
+                    <div class="apply__tab-connector"></div>
+                    <div class="apply__tab" id="tab-2">
+                        <span class="apply__tab-num">2</span>
+                        <span class="apply__tab-text">Payment</span>
+                    </div>
+                    <div class="apply__tab-connector"></div>
+                    <div class="apply__tab" id="tab-3">
+                        <span class="apply__tab-num">3</span>
+                        <span class="apply__tab-text">Confirmation</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: User Info -->
+                <div id="step-1" class="apply__step">
+                    <form id="application-form" class="apply__form" onsubmit="processForm(event)">
+                        <div class="form-group">
+                            <label for="custName" class="form-label">Full Name</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="custName" required placeholder="e.g. Arjun Sharma" class="form-input" minlength="2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="custEmail" class="form-label">Email Address</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="custEmail" required placeholder="e.g. arjun@email.com" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="custPhone" class="form-label">WhatsApp Number</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <input type="tel" id="custPhone" required placeholder="e.g. +91 98765 43210" class="form-input" pattern="[\+]?[0-9\s\-]{10,15}" title="Enter a valid phone number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseSelect" class="form-label">Select Program</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <select id="courseSelect" required class="form-input form-select">
+                                    <option value="60000" data-name="SMC Mastery Program">SMC Mastery — ₹60,000</option>
+                                    <option value="50000" data-name="CRT Strategy Program">CRT Strategy — ₹50,000</option>
+                                    <option value="40000" data-name="4H Candle Range Strategy">4H Candle Range — ₹40,000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full btn--lg btn--glow" id="proceed-btn">
+                            <span>Proceed to Checkout</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <p class="apply__note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Your information is encrypted and never shared.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Step 2: Payment Methods -->
+                <div id="step-2" class="apply__step apply__step--hidden">
+                    <!-- Order Summary -->
+                    <div class="apply__summary">
+                        <div class="apply__summary-left">
+                            <span class="apply__summary-label">Course</span>
+                            <span class="apply__summary-value" id="summary-course">SMC Mastery</span>
+                        </div>
+                        <div class="apply__summary-right">
+                            <span class="apply__summary-label">Amount</span>
+                            <span class="apply__summary-price" id="summary-price">₹60,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Back Button -->
+                    <button onclick="switchTab(2, 1)" class="btn btn--ghost apply__back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Details</span>
+                    </button>
+
+                    <!-- Fast UPI -->
+                    <h4 class="apply__payment-heading">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        Fast UPI (Mobile Only)
+                    </h4>
+                    <div class="apply__upi-grid">
+                        <button onclick="triggerMobileUPI('gpay')" class="apply__upi-btn" id="btn-gpay">
+                            <div class="apply__upi-icon" style="background: #1a73e8;">
+                                <i class="fa-brands fa-google-pay" style="font-size: 1.4rem;"></i>
+                            </div>
+                            <span>Google Pay</span>
+                        </button>
+                        <button onclick="triggerMobileUPI('phonepe')" class="apply__upi-btn" id="btn-phonepe">
+                            <div class="apply__upi-icon" style="background: #5f259f;">
+                                <i class="fa-solid fa-p" style="font-size: 1.1rem;"></i>
+                            </div>
+                            <span>PhonePe</span>
+                        </button>
+                        <button onclick="triggerMobileUPI('paytm')" class="apply__upi-btn" id="btn-paytm">
+                            <div class="apply__upi-icon" style="background: #00baf2;">
+                                <i class="fa-solid fa-wallet" style="font-size: 1.1rem;"></i>
+                            </div>
+                            <span>Paytm</span>
+                        </button>
+                    </div>
+
+                    <!-- QR Option -->
+                    <h4 class="apply__payment-heading">
+                        <i class="fa-solid fa-desktop"></i>
+                        Desktop / QR Scanner
+                    </h4>
+                    <button onclick="toggleScanner()" class="apply__qr-toggle" id="qr-toggle-btn">
+                        <div class="apply__qr-toggle-left">
+                            <div class="apply__qr-toggle-icon">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <div>
+                                <div class="apply__qr-toggle-title">Scan QR Code</div>
+                                <div class="apply__qr-toggle-sub">Pay using any UPI app</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down apply__qr-chevron" id="qr-chevron"></i>
+                    </button>
+
+                    <!-- QR Expanded Section -->
+                    <div id="qr-section" class="apply__qr-section apply__step--hidden">
+                        <p class="apply__qr-instruction">Scan this QR code to pay <strong class="text-gold">₹<span class="qr-price-text">60,000</span></strong></p>
+                        <div class="apply__qr-wrapper">
+                            <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=marketvision@okhdfc%26pn=Market%20Vision%26cu=INR" alt="Payment QR Code" width="200" height="200">
+                        </div>
+                        <div class="apply__upi-manual">
+                            <span class="apply__upi-manual-label">Manual UPI ID</span>
+                            <div class="apply__upi-manual-row">
+                                <code id="merchant-upi-display" class="apply__upi-id">marketvision@okhdfc</code>
+                                <button onclick="copyUpi()" class="apply__upi-copy" id="copy-upi-btn">
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span id="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button onclick="checkPaymentStatus()" class="btn btn--primary btn--full" id="check-payment-btn">
+                            <i class="fa-solid fa-rotate"></i>
+                            <span>I have paid — check status</span>
+                        </button>
+                    </div>
+
+                    <div class="apply__secure">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Secure 256-bit encrypted transaction</span>
+                    </div>
+                </div>
+
+                <!-- Step 3: Success -->
+                <div id="step-3" class="apply__step apply__step--hidden">
+                    <div class="apply__success">
+                        <div class="apply__success-icon">
+                            <div class="apply__success-ring"></div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h2 class="apply__success-title">Payment Successful!</h2>
+                        <p class="apply__success-text">Your enrollment is confirmed. A confirmation email with all the details has been sent to your inbox.</p>
+
+                        <div class="apply__success-details">
+                            <div class="apply__success-detail">
+                                <span>Course</span>
+                                <strong id="confirm-course">SMC Mastery Program</strong>
+                            </div>
+                            <div class="apply__success-detail">
+                                <span>Amount Paid</span>
+                                <strong id="confirm-amount" class="text-gold">₹60,000</strong>
+                            </div>
+                            <div class="apply__success-detail">
+                                <span>Status</span>
+                                <strong class="text-success">Confirmed</strong>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/919999999999?text=Hi%2C%20I%20just%20enrolled!" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--full btn--lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Join Premium Community</span>
+                        </a>
+                        <p class="apply__success-note">You'll be added to the premium Telegram group within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">Market<span>Vision</span></a>
+                    <p class="footer__tagline">Master institutional trading. Stop being retail liquidity.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="footer__social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Programs</h4>
+                    <a href="#programs" class="footer__link">SMC Mastery</a>
+                    <a href="#programs" class="footer__link">CRT Strategy</a>
+                    <a href="#programs" class="footer__link">4H Candle Range</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Company</h4>
+                    <a href="#about" class="footer__link">About Us</a>
+                    <a href="#results" class="footer__link">Student Results</a>
+                    <a href="#faq" class="footer__link">FAQ</a>
+                    <a href="#apply" class="footer__link">Apply Now</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Legal</h4>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Market Vision Education. All rights reserved.</p>
+                <p class="footer__disclaimer">Trading in financial markets involves significant risk. Past results do not guarantee future performance. This is an educational program, not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll offset fix -->
+    <script src="js/main.js"></script>
+</body>
+</html>
