@@ -30,6 +30,7 @@
     <nav id="main-nav" class="nav">
         <div class="nav__container">
             <a href="#" class="nav__logo">
+                <img src="images/logo.png" alt="Market Vision Logo" class="nav__logo-img">
                 Market<span>Vision</span>
             </a>
 
@@ -41,7 +42,7 @@
                 <a href="#faq" class="nav__link" onclick="closeMobileMenu()">FAQ</a>
             </div>
 
-            <a href="#apply" class="nav__cta">Apply Now</a>
+            <a href="#apply" class="nav__cta">Get Instant Access</a>
 
             <button class="nav__hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <span></span>
@@ -61,7 +62,7 @@
         <div class="hero__content">
             <div class="hero__badge reveal-up">
                 <i class="fa-solid fa-bolt"></i>
-                <span>Limited Seats — Next Batch Starting Soon</span>
+                <span>🔥 Limited Seats — Only 50 Left | Price Increasing Soon</span>
             </div>
 
             <h1 class="hero__title reveal-up" style="--delay: 0.1s;">
@@ -70,17 +71,16 @@
             </h1>
 
             <p class="hero__subtitle reveal-up" style="--delay: 0.2s;">
-                Master SMC, CRT & the 4H Candle Range Strategy. Build a high-performance 
-                trading system and stop being retail liquidity.
+                After this course, you will be able to capture <strong>high RRR trades</strong> using Smart Money Concepts (SMC). Build a high-performance trading system and stop being retail liquidity.
             </p>
 
             <div class="hero__actions reveal-up" style="--delay: 0.3s;">
                 <a href="#apply" class="btn btn--primary btn--lg btn--glow">
-                    <span>Start Your Journey</span>
+                    <span>Enroll in Mentorship</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
                 <a href="#programs" class="btn btn--glass btn--lg">
-                    <span>View Programs</span>
+                    <span>Get Instant Access</span>
                 </a>
             </div>
 
@@ -92,12 +92,17 @@
                 <div class="hero__trust-divider"></div>
                 <div class="hero__trust-item">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    <span>500+ Students</span>
+                    <span>1000+ Traders Trained</span>
                 </div>
                 <div class="hero__trust-divider"></div>
                 <div class="hero__trust-item">
                     <i class="fa-solid fa-star"></i>
                     <span>4.9/5 Rating</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Secure Payment</span>
                 </div>
             </div>
         </div>
@@ -116,9 +121,9 @@
     <section class="stats">
         <div class="stats__container">
             <div class="stat reveal-up">
-                <div class="stat__number" data-target="500">0</div>
+                <div class="stat__number" data-target="1000">0</div>
                 <div class="stat__suffix">+</div>
-                <div class="stat__label">Students Trained</div>
+                <div class="stat__label">Traders Trained</div>
             </div>
             <div class="stat__divider"></div>
             <div class="stat reveal-up" style="--delay: 0.1s;">
@@ -244,12 +249,17 @@
                     Elite <span class="text-gold-gradient">Programs</span>
                 </h2>
                 <p class="section-desc">Choose the path that matches your trading journey. Every program includes lifetime community access.</p>
+                      <!-- Scarcity Banner -->
+            <div class="scarcity-banner reveal-up">
+                <i class="fa-solid fa-fire"></i>
+                <span>🔥 Limited Time Offer — Only <strong>50 Seats</strong> Available | Price Increasing Soon!</span>
+                <span class="scarcity-timer" id="scarcity-countdown">Loading...</span>
             </div>
 
             <div class="programs__grid">
                 <!-- Program 1 -->
                 <div class="program-card reveal-up" style="--delay: 0s;">
-                    <div class="program-card__badge">Foundation</div>
+                    <div class="program-card__badge">Best for Beginners</div>
                     <div class="program-card__header">
                         <div class="program-card__icon">
                             <i class="fa-solid fa-chart-candlestick" style="font-size: 1.5rem;"></i>
@@ -265,7 +275,7 @@
                         </div>
                         <div class="program-card__feature">
                             <i class="fa-solid fa-check"></i>
-                            <span>Entry & Exit Frameworks</span>
+                            <span>Entry &amp; Exit Frameworks</span>
                         </div>
                         <div class="program-card__feature">
                             <i class="fa-solid fa-check"></i>
@@ -282,10 +292,13 @@
                     </div>
                     <div class="program-card__footer">
                         <div class="program-card__price">
-                            <span class="program-card__currency">₹</span>40,000
+                            <span class="price-original">₹40,000</span>
+                            <span class="program-card__currency">₹</span>2,499
                         </div>
-                        <button onclick="selectCourse('4H Candle Range Strategy', 40000)" class="btn btn--outline btn--full">
-                            <span>Apply Now</span>
+                        <span class="price-note">🔥 Limited Time — Save ₹37,501</span>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('4H Candle Range Strategy', 2499)" class="btn btn--outline btn--full" style="margin-top:1rem;">
+                            <span>Start Trading Profitably Today 🚀</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -294,7 +307,7 @@
                 <!-- Program 2 (Featured) -->
                 <div class="program-card program-card--featured reveal-up" style="--delay: 0.1s;">
                     <div class="program-card__popular">
-                        <i class="fa-solid fa-fire"></i> Most Popular
+                        <i class="fa-solid fa-fire"></i> Most Popular 🔥
                     </div>
                     <div class="program-card__badge program-card__badge--gold">Advanced</div>
                     <div class="program-card__header">
@@ -311,7 +324,7 @@
                         </div>
                         <div class="program-card__feature">
                             <i class="fa-solid fa-check"></i>
-                            <span>Order Blocks & Liquidity</span>
+                            <span>Order Blocks &amp; Liquidity</span>
                         </div>
                         <div class="program-card__feature">
                             <i class="fa-solid fa-check"></i>
@@ -336,10 +349,13 @@
                     </div>
                     <div class="program-card__footer">
                         <div class="program-card__price program-card__price--gold">
-                            <span class="program-card__currency">₹</span>60,000
+                            <span class="price-original">₹60,000</span>
+                            <span class="program-card__currency">₹</span>5,999
                         </div>
-                        <button onclick="selectCourse('SMC Mastery Program', 60000)" class="btn btn--primary btn--full btn--glow">
-                            <span>Apply Now</span>
+                        <span class="price-note">🔥 Limited Time — Save ₹54,001</span>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('SMC Mastery Program', 5999)" class="btn btn--primary btn--full btn--glow" style="margin-top:1rem;">
+                            <span>Get Instant Access</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -383,15 +399,86 @@
                     </div>
                     <div class="program-card__footer">
                         <div class="program-card__price">
-                            <span class="program-card__currency">₹</span>50,000
+                            <span class="price-original">₹50,000</span>
+                            <span class="program-card__currency">₹</span>3,999
                         </div>
-                        <button onclick="selectCourse('CRT Strategy Program', 50000)" class="btn btn--outline btn--full">
-                            <span>Apply Now</span>
+                        <span class="price-note">🔥 Limited Time — Save ₹46,001</span>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('CRT Strategy Program', 3999)" class="btn btn--outline btn--full" style="margin-top:1rem;">
+                            <span>Start Trading Profitably Today 🚀</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- ===== STRATEGIES SECTION ===== -->
+            <div class="section-header reveal-up" style="margin-top: 5rem;">
+                <div class="section-label">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Individual Strategies
+                </div>
+                <h2 class="section-title">Strategies <span class="text-gold-gradient">Covered</span></h2>
+                <p class="section-desc">Pick a single powerful strategy or grab them all at one unbeatable price.</p>
+            </div>
+
+            <div class="strategy-cards reveal-up">
+                <div class="strategy-card">
+                    <div class="strategy-card__icon"><i class="fa-solid fa-compass"></i></div>
+                    <div class="strategy-card__body">
+                        <h4>Market Bias &amp; Trending Strategy</h4>
+                        <p>Learn to identify bullish/bearish bias and trade strong trends with high-probability continuation setups.</p>
+                    </div>
+                    <div class="strategy-card__price">₹1,999</div>
+                    <span class="price-emi">or EMI starting at ₹999/month</span>
+                    <button onclick="selectCourse('Market Bias &amp; Trending Strategy', 1999)" class="btn btn--outline btn--full strategy-card__btn">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Buy Now — ₹1,999</span>
+                    </button>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="strategy-card__body">
+                        <h4>Silver Bullet Strategy</h4>
+                        <p>Time-based intraday setup for precise, high-accuracy entries at institutional price points.</p>
+                    </div>
+                    <div class="strategy-card__price">₹2,499</div>
+                    <span class="price-emi">or EMI starting at ₹999/month</span>
+                    <button onclick="selectCourse('Silver Bullet Strategy', 2499)" class="btn btn--primary btn--full strategy-card__btn btn--glow">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Buy Now — ₹2,499</span>
+                    </button>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-card__icon"><i class="fa-solid fa-water"></i></div>
+                    <div class="strategy-card__body">
+                        <h4>Order Flow Trading Strategy</h4>
+                        <p>Understand liquidity, buying/selling pressure, and smart money behavior to trade with institutions.</p>
+                    </div>
+                    <div class="strategy-card__price">₹3,999</div>
+                    <span class="price-emi">or EMI starting at ₹999/month</span>
+                    <button onclick="selectCourse('Order Flow Trading Strategy', 3999)" class="btn btn--outline btn--full strategy-card__btn">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Buy Now — ₹3,999</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== COMBO OFFER ===== -->
+            <div class="combo-offer-block reveal-up">
+                <div class="combo-badge">🔥 Best Value</div>
+                <div class="section-label" style="justify-content:center; margin-bottom:1rem;">
+                    <i class="fa-solid fa-tags"></i> Strategy Combo Offer
+                </div>
+                <p class="combo-equation">₹1,999 + ₹2,499 + ₹3,999 = ₹8,497</p>
+                <div class="combo-price">₹10,000</div>
+                <p style="color:var(--color-text-dim); margin-bottom:1.5rem; font-size:0.95rem;">Get All 3 Strategies — Combo Deal — Limited Offer 🎯</p>
+                <button onclick="selectCourse('All Strategies Combo', 10000)" class="btn btn--primary btn--lg btn--glow">
+                    <span>Get All Strategies at ₹10,000</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <p class="price-emi" style="margin-top:0.75rem; text-align:center;">or EMI starting at ₹999/month</p>
+            </div>          </div>
         </div>
     </section>
 
@@ -414,11 +501,7 @@
             <div class="testimonials__grid">
                 <div class="testimonial-card reveal-up" style="--delay: 0s;">
                     <div class="testimonial-card__stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="testimonial-card__text">"Before joining, I was blowing accounts every few months. The SMC framework completely changed how I see the market. I'm now consistently profitable for 8 months straight."</p>
                     <div class="testimonial-card__author">
@@ -429,14 +512,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card reveal-up" style="--delay: 0.1s;">
                     <div class="testimonial-card__stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="testimonial-card__text">"The 4H Candle Range strategy alone gave me an edge I never had. My win rate went from 35% to 68% in just 3 months. The community support is incredible."</p>
                     <div class="testimonial-card__author">
@@ -447,14 +525,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card reveal-up" style="--delay: 0.2s;">
                     <div class="testimonial-card__stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
                     <p class="testimonial-card__text">"The CRT strategy opened my eyes to how time-based liquidity really works. I now have a systematic approach instead of random entries. Best investment I've made."</p>
                     <div class="testimonial-card__author">
@@ -464,6 +537,103 @@
                             <div class="testimonial-card__role">CRT Strategy Graduate</div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Chat-Style Testimonials -->
+            <div class="section-header reveal-up" style="margin-top: 4rem;">
+                <h2 class="section-title">Student <span class="text-gold-gradient">Results</span> Chat</h2>
+                <p class="section-desc">Messages directly from our Telegram community.</p>
+            </div>
+            <div class="chat-container reveal-up">
+                <div class="chat-bubble chat-bubble--left">
+                    <div class="chat-header">
+                        <div class="chat-avatar">AK</div>
+                        <span class="chat-name">Arjun K.</span>
+                    </div>
+                    <p class="chat-text">Bhai just closed a 1:8 RRR trade using the SMC order block setup! 🔥 Never thought I'd pull this off. Thank you Market Vision!</p>
+                    <span class="chat-timestamp">Today, 10:32 AM ✓✓</span>
+                </div>
+                <div class="chat-bubble chat-bubble--left">
+                    <div class="chat-header">
+                        <div class="chat-avatar" style="background:#7c3aed;">SR</div>
+                        <span class="chat-name">Sneha R.</span>
+                    </div>
+                    <p class="chat-text">Profit booking done! Silver Bullet entry was perfect again. 3rd consecutive winning day. This course is absolutely worth every rupee 💯</p>
+                    <span class="chat-timestamp">Yesterday, 3:45 PM ✓✓</span>
+                </div>
+                <div class="chat-bubble chat-bubble--left">
+                    <div class="chat-header">
+                        <div class="chat-avatar" style="background:#0891b2;">MN</div>
+                        <span class="chat-name">Mihir N.</span>
+                    </div>
+                    <p class="chat-text">Used the 4H candle range technique today. Hit TP1 and TP2 both 🎯 My consistency has gone through the roof since joining. Highly recommend!</p>
+                    <span class="chat-timestamp">2 days ago, 11:20 AM ✓✓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- BONUSES SECTION                              -->
+    <!-- ============================================ -->
+    <section id="bonuses" class="bonuses">
+        <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad);">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-gift"></i>
+                    Value Stacking
+                </div>
+                <h2 class="section-title">🎁 Exclusive <span class="text-gold-gradient">Bonuses</span></h2>
+                <p class="section-desc">Enroll today and unlock bonuses worth <strong class="text-gold">₹15,000 — absolutely FREE</strong></p>
+            </div>
+            <div class="bonuses__grid">
+                <div class="bonus-card reveal-up">
+                    <div class="bonus-icon"><i class="fa-solid fa-video"></i></div>
+                    <div class="bonus-content">
+                        <h4>Live Weekly Trade Sessions</h4>
+                        <p>Join live market analysis and trade call sessions every week with the mentor.</p>
+                    </div>
+                    <span class="bonus-value">₹5,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.05s;">
+                    <div class="bonus-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <div class="bonus-content">
+                        <h4>Private Telegram Signals (1 Month Free)</h4>
+                        <p>Get real-time trade signals from the mentor for an entire month — free!</p>
+                    </div>
+                    <span class="bonus-value">₹3,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.1s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="bonus-content">
+                        <h4>Personal Strategy PDF</h4>
+                        <p>Downloadable PDF covering all SMC setups, entry rules, and checklist.</p>
+                    </div>
+                    <span class="bonus-value">₹2,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.15s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="bonus-content">
+                        <h4>Risk Management Calculator</h4>
+                        <p>Custom Excel/Sheets calculator to manage position sizing perfectly on every trade.</p>
+                    </div>
+                    <span class="bonus-value">₹2,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.2s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-film"></i></div>
+                    <div class="bonus-content">
+                        <h4>Recorded Trade Breakdowns</h4>
+                        <p>Access hours of post-trade analysis with real market examples from the mentor.</p>
+                    </div>
+                    <span class="bonus-value">₹3,000</span>
+                </div>
+            </div>
+            <div class="guarantee-block reveal-up">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h4>🛡️ 7 Days Money Back Guarantee — No Questions Asked</h4>
+                    <p style="font-size:0.88rem; color:var(--color-text-dim); margin-top:0.3rem;">If you're not satisfied within 7 days and have watched less than 20% of the content, we'll refund every rupee. Zero risk for you.</p>
                 </div>
             </div>
         </div>
@@ -610,11 +780,16 @@
     <section id="apply" class="apply">
         <div class="apply__container">
             <div class="section-header reveal-up">
+                <div class="scarcity-banner" style="margin-bottom:1.5rem;">
+                    <i class="fa-solid fa-users"></i>
+                    <span>⚠️ Only <strong>50 Seats</strong> Available — <strong>47 already taken!</strong></span>
+                </div>
                 <h2 class="section-title">Secure Your <span class="text-gold-gradient">Seat</span></h2>
                 <div class="apply__timer" id="urgency-timer">
                     <i class="fa-solid fa-clock"></i>
-                    <span id="timer-text">Offer expires in: 15:00</span>
+                    <span id="timer-text">Offer expires in: 24:00:00</span>
                 </div>
+                <p style="font-size:0.85rem; color:var(--color-danger); font-weight:700; margin-top:0.5rem;">🔥 Price Increasing Soon — Lock In Your Discount Now!</p>
             </div>
 
             <div class="apply__card reveal-up" style="--delay: 0.1s;">
@@ -665,16 +840,26 @@
                             <div class="form-input-wrap">
                                 <i class="fa-solid fa-graduation-cap"></i>
                                 <select id="courseSelect" required class="form-input form-select">
-                                    <option value="60000" data-name="SMC Mastery Program">SMC Mastery — ₹60,000</option>
-                                    <option value="50000" data-name="CRT Strategy Program">CRT Strategy — ₹50,000</option>
-                                    <option value="40000" data-name="4H Candle Range Strategy">4H Candle Range — ₹40,000</option>
+                                    <option value="5999" data-name="SMC Mastery Program">🔥 SMC Mastery (Most Popular) — ₹5,999</option>
+                                    <option value="10000" data-name="All Strategies Combo">🏆 All Strategies Combo (Best Value) — ₹10,000</option>
+                                    <option value="3999" data-name="CRT Strategy Program">CRT Strategy — ₹3,999</option>
+                                    <option value="2499" data-name="4H Candle Range Strategy">4H Candle Range (Beginners) — ₹2,499</option>
+                                    <option value="1999" data-name="Market Bias & Trending Strategy">Market Bias &amp; Trending Strategy — ₹1,999</option>
+                                    <option value="2499" data-name="Silver Bullet Strategy">Silver Bullet Strategy — ₹2,499</option>
+                                    <option value="3999" data-name="Order Flow Trading Strategy">Order Flow Trading Strategy — ₹3,999</option>
                                 </select>
                             </div>
                         </div>
                         <button type="submit" class="btn btn--primary btn--full btn--lg btn--glow" id="proceed-btn">
-                            <span>Proceed to Checkout</span>
+                            <span>Get Instant Access 🚀</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
+                        <div class="trust-badges">
+                            <span class="trust-badge"><i class="fa-solid fa-shield-halved"></i> Secure Payment</span>
+                            <span class="trust-badge"><i class="fa-solid fa-lock"></i> 256-bit Encrypted</span>
+                            <span class="trust-badge"><i class="fa-solid fa-rotate-left"></i> 7-Day Refund</span>
+                            <span class="trust-badge"><i class="fa-brands fa-google-pay"></i> UPI / Cards</span>
+                        </div>
                         <p class="apply__note">
                             <i class="fa-solid fa-shield-halved"></i>
                             Your information is encrypted and never shared.
@@ -692,7 +877,7 @@
                         </div>
                         <div class="apply__summary-right">
                             <span class="apply__summary-label">Amount</span>
-                            <span class="apply__summary-price" id="summary-price">₹60,000</span>
+                            <span class="apply__summary-price" id="summary-price">₹5,999</span>
                         </div>
                     </div>
 
@@ -728,6 +913,24 @@
                         </button>
                     </div>
 
+                    <!-- EMI Option -->
+                    <h4 class="apply__payment-heading" style="margin-top: 1.5rem;">
+                        <i class="fa-regular fa-credit-card"></i>
+                        Credit Card / EMI Option
+                    </h4>
+                    <button onclick="triggerEMI()" class="apply__qr-toggle" id="emi-toggle-btn" style="margin-bottom: 1.5rem; text-align: left;">
+                        <div class="apply__qr-toggle-left">
+                            <div class="apply__qr-toggle-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--color-gold);">
+                                <i class="fa-solid fa-percent"></i>
+                            </div>
+                            <div>
+                                <div class="apply__qr-toggle-title">Pay via EMI starting at ₹999/month</div>
+                                <div class="apply__qr-toggle-sub">Available on all major Credit Cards</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right apply__qr-chevron" style="color: var(--color-gold);"></i>
+                    </button>
+
                     <!-- QR Option -->
                     <h4 class="apply__payment-heading">
                         <i class="fa-solid fa-desktop"></i>
@@ -748,7 +951,7 @@
 
                     <!-- QR Expanded Section -->
                     <div id="qr-section" class="apply__qr-section apply__step--hidden">
-                        <p class="apply__qr-instruction">Scan this QR code to pay <strong class="text-gold">₹<span class="qr-price-text">60,000</span></strong></p>
+                        <p class="apply__qr-instruction">Scan this QR code to pay <strong class="text-gold">₹<span class="qr-price-text">5,999</span></strong></p>
                         <div class="apply__qr-wrapper">
                             <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=marketvision@okhdfc%26pn=Market%20Vision%26cu=INR" alt="Payment QR Code" width="200" height="200">
                         </div>
@@ -791,7 +994,7 @@
                             </div>
                             <div class="apply__success-detail">
                                 <span>Amount Paid</span>
-                                <strong id="confirm-amount" class="text-gold">₹60,000</strong>
+                                <strong id="confirm-amount" class="text-gold">₹5,999</strong>
                             </div>
                             <div class="apply__success-detail">
                                 <span>Status</span>

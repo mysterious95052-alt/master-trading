@@ -24,7 +24,7 @@ const MERCHANT_NAME    = "Market Vision Education";
 // STATE
 // ==============================================
 let currentCourseName  = "SMC Mastery Program";
-let currentCoursePrice = 60000;
+let currentCoursePrice = 5999;
 let timerInterval      = null;
 
 // ==============================================
@@ -198,21 +198,33 @@ function animateCounter(el) {
 // COUNTDOWN TIMER
 // ==============================================
 function initTimer() {
-    let timeLeft = 15 * 60; // 15 minutes
+    let timeLeft = 24 * 60 * 60; // 24 hours
     const timerEl = document.getElementById('timer-text');
+    const scarcityEl = document.getElementById('scarcity-countdown');
     if (!timerEl) return;
+
+    function formatTime(secs) {
+        const h = Math.floor(secs / 3600);
+        const m = Math.floor((secs % 3600) / 60);
+        const s = secs % 60;
+        return `${h}:${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+    }
 
     timerInterval = setInterval(() => {
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            timerEl.textContent = 'Offer has expired';
+            timerEl.textContent = 'Offer has expired — prices may increase';
+            if (scarcityEl) scarcityEl.textContent = 'EXPIRED';
             return;
         }
         timeLeft--;
-        const m = Math.floor(timeLeft / 60);
-        const s = timeLeft % 60;
-        timerEl.textContent = `Offer expires in: ${m}:${s < 10 ? '0' : ''}${s}`;
+        timerEl.textContent = `Offer expires in: ${formatTime(timeLeft)}`;
+        if (scarcityEl) scarcityEl.textContent = formatTime(timeLeft);
     }, 1000);
+
+    // Init display
+    timerEl.textContent = `Offer expires in: ${formatTime(timeLeft)}`;
+    if (scarcityEl) scarcityEl.textContent = formatTime(timeLeft);
 }
 
 // ==============================================
@@ -245,13 +257,31 @@ function selectCourse(name, price) {
     const selectEl = document.getElementById('courseSelect');
     if (!selectEl) return;
 
-    // Find option by data-name attribute
+    // Match by price value (most reliable) first, then by data-name
+    let matched = false;
     for (let i = 0; i < selectEl.options.length; i++) {
-        if (selectEl.options[i].getAttribute('data-name') === name) {
+        const optVal = parseInt(selectEl.options[i].value, 10);
+        const optName = selectEl.options[i].getAttribute('data-name') || '';
+        // Match by both price AND approximate name (handles &amp; encoding differences)
+        if (optVal === price && optName.replace(/&amp;/g, '&') === name.replace(/&amp;/g, '&')) {
             selectEl.selectedIndex = i;
+            matched = true;
             break;
         }
     }
+    // Fallback: match by price only
+    if (!matched) {
+        for (let i = 0; i < selectEl.options.length; i++) {
+            if (parseInt(selectEl.options[i].value, 10) === price) {
+                selectEl.selectedIndex = i;
+                break;
+            }
+        }
+    }
+
+    // Pre-set currentCoursePrice and currentCourseName so payment step is ready
+    currentCoursePrice = price;
+    currentCourseName  = name.replace(/&amp;/g, '&');
 
     document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
 }
@@ -393,6 +423,45 @@ function checkPaymentStatus() {
     setTimeout(() => {
         switchTab(2, 3);
     }, 2500);
+}
+
+// ==============================================
+// EMI PAYMENT SIMULATION
+// ==============================================
+function triggerEMI() {
+    const btn = document.getElementById('emi-toggle-btn');
+    if (!btn) return;
+    
+    const titleText = btn.querySelector('.apply__qr-toggle-title');
+    const subtitleText = btn.querySelector('.apply__qr-toggle-sub');
+    const icon = btn.querySelector('.apply__qr-chevron');
+
+    // Show loading state
+    if (titleText) titleText.textContent = 'Redirecting to secure EMI Gateway...';
+    if (subtitleText) subtitleText.textContent = 'Please wait, do not close this window.';
+    if (icon) icon.className = 'fa-solid fa-spinner fa-spin apply__qr-chevron';
+    
+    btn.disabled = true;
+    btn.style.opacity = '0.8';
+
+    // Simulate redirection and success
+    setTimeout(() => {
+        if (titleText) titleText.textContent = 'Processing EMI Approval...';
+        
+        setTimeout(() => {
+            switchTab(2, 3);
+            
+            // Reset for next time
+            setTimeout(() => {
+                if (titleText) titleText.textContent = 'Pay via EMI starting at ₹999/month';
+                if (subtitleText) subtitleText.textContent = 'Available on all major Credit Cards';
+                if (icon) icon.className = 'fa-solid fa-chevron-right apply__qr-chevron';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 1000);
+            
+        }, 1500);
+    }, 1500);
 }
 
 // ==============================================
