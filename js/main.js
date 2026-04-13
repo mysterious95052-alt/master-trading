@@ -246,9 +246,13 @@ function closeMobileMenu() {
     const btn = document.getElementById('hamburger-btn');
     if (!links || !btn) return;
 
-    links.classList.remove('open');
-    btn.classList.remove('active');
-    document.body.style.overflow = '';
+    // Use a small timeout so mobile browsers don't cancel the link navigation
+    // when the element suddenly moves off-screen.
+    setTimeout(() => {
+        links.classList.remove('open');
+        btn.classList.remove('active');
+        document.body.style.overflow = '';
+    }, 50);
 }
 
 // ==============================================
