@@ -439,6 +439,33 @@ input, select, textarea {
     transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Mobile Nav responsiveness */
+@media (max-width: 768px) {
+    .nav__hamburger {
+        display: flex;
+    }
+    .nav__links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #0a0a0f;
+        flex-direction: column;
+        padding: 6rem 2rem 2rem;
+        gap: 2rem;
+        transition: 0.4s ease;
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+    .nav__links.open {
+        right: 0;
+    }
+    .nav__cta {
+        display: none; /* Hide CTA button on small phones in navbar */
+    }
+}
+
 /* ==============================================
    HERO
    ============================================== */
