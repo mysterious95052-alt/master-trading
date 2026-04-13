@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Market Vision Programs — Choose from SMC Mastery, CRT Strategy, and 4H Candle Range. Elite trading education with lifetime community access.">
+    <meta name="keywords" content="trading programs, SMC mastery, CRT strategy, 4H candle range, trading course pricing">
+    <meta name="author" content="Market Vision Education">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Market Vision | Programs">
+    <meta property="og:description" content="Elite trading programs — Choose your path and master Smart Money Concepts.">
+    <meta property="og:type" content="website">
+    <title>Market Vision | Programs — Elite Trading Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav id="main-nav" class="nav">
+        <div class="nav__container">
+            <a href="the-edge.html" class="nav__logo">
+                <img src="../images/logo.png" alt="Market Vision Logo" class="nav__logo-img">
+                Market<span>Vision</span>
+            </a>
+
+            <div class="nav__links" id="nav-links">
+                <a href="the-edge.html" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
+                <a href="programs.html" class="nav__link" onclick="closeMobileMenu()">Programs</a>
+                <a href="results.html" class="nav__link" onclick="closeMobileMenu()">Results</a>
+                <a href="mentor.html" class="nav__link" onclick="closeMobileMenu()">Mentor</a>
+                <a href="faq.html" class="nav__link" onclick="closeMobileMenu()">FAQ</a>
+            </div>
+
+            <a href="the-edge.html#apply" class="nav__cta">Get Instant Access</a>
+
+            <button class="nav__hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- PROGRAMS                                      -->
+    <!-- ============================================ -->
+    <section id="programs" class="programs">
+        <div class="programs__container">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-gem"></i>
+                    What We Offer
+                </div>
+                <h2 class="section-title">
+                    Elite <span class="text-gold-gradient">Programs</span>
+                </h2>
+                <p class="section-desc">Choose the path that matches your trading journey. Every program includes lifetime community access.</p>
+                <!-- Scarcity Banner -->
+                <div class="scarcity-banner reveal-up">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>🔥 Limited Time Offer — Only <strong>50 Seats</strong> Available | Price Increasing Soon!</span>
+                    <span class="scarcity-timer" id="scarcity-countdown">Loading...</span>
+                </div>
+
+                <div class="programs__grid">
+                    <!-- Program 1 -->
+                    <div class="program-card reveal-up" style="--delay: 0s;">
+                        <div class="program-card__badge">Best for Beginners</div>
+                        <div class="program-card__header">
+                            <div class="program-card__icon">
+                                <i class="fa-solid fa-chart-candlestick" style="font-size: 1.5rem;"></i>
+                                <i class="fa-solid fa-clock" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 class="program-card__title">4H Candle Range</h3>
+                            <p class="program-card__subtitle">Master time-based liquidity and precision entries using the 4-hour candle range mapping system.</p>
+                        </div>
+                        <div class="program-card__features">
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>4H Range Mapping System</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Entry &amp; Exit Frameworks</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Risk Management Templates</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>10+ Video Lessons</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Telegram Community Access</span>
+                            </div>
+                        </div>
+                        <div class="program-card__footer">
+                            <div class="program-card__price">
+                                <span class="price-original">₹40,000</span>
+                                <span class="program-card__currency">₹</span>2,499
+                            </div>
+                            <span class="price-note">🔥 Limited Time — Save ₹37,501</span>
+                            <span class="price-emi">or EMI starting at ₹999/month</span>
+                            <button onclick="selectCourse('4H Candle Range Strategy', 2499)" class="btn btn--outline btn--full" style="margin-top:1rem;">
+                                <span>Start Trading Profitably Today 🚀</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 (Featured) -->
+                    <div class="program-card program-card--featured reveal-up" style="--delay: 0.1s;">
+                        <div class="program-card__popular">
+                            <i class="fa-solid fa-fire"></i> Most Popular 🔥
+                        </div>
+                        <div class="program-card__badge program-card__badge--gold">Advanced</div>
+                        <div class="program-card__header">
+                            <div class="program-card__icon program-card__icon--gold">
+                                <i class="fa-solid fa-building-columns" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 class="program-card__title program-card__title--gold">SMC Mastery</h3>
+                            <p class="program-card__subtitle">The complete Smart Money Concepts program. Learn to read institutional order flow and trade like the big players.</p>
+                        </div>
+                        <div class="program-card__features">
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Full SMC Framework</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Order Blocks &amp; Liquidity</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Break of Structure Analysis</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>25+ Video Lessons</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Live Trade Reviews (Weekly)</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>1-on-1 Mentorship Sessions</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Premium Community Access</span>
+                            </div>
+                        </div>
+                        <div class="program-card__footer">
+                            <div class="program-card__price program-card__price--gold">
+                                <span class="price-original">₹60,000</span>
+                                <span class="program-card__currency">₹</span>5,999
+                            </div>
+                            <span class="price-note">🔥 Limited Time — Save ₹54,001</span>
+                            <span class="price-emi">or EMI starting at ₹999/month</span>
+                            <button onclick="selectCourse('SMC Mastery Program', 5999)" class="btn btn--primary btn--full btn--glow" style="margin-top:1rem;">
+                                <span>Get Instant Access</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="program-card reveal-up" style="--delay: 0.2s;">
+                        <div class="program-card__badge">Intermediate</div>
+                        <div class="program-card__header">
+                            <div class="program-card__icon">
+                                <i class="fa-solid fa-rotate" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h3 class="program-card__title">CRT Strategy</h3>
+                            <p class="program-card__subtitle">Deep dive into Candle Range Theory. Build systematic setups using time and price-based liquidity models.</p>
+                        </div>
+                        <div class="program-card__features">
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Complete CRT Framework</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Time-Based Liquidity Models</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Multi-Timeframe Analysis</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>15+ Video Lessons</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Trade Journal Templates</span>
+                            </div>
+                            <div class="program-card__feature">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Premium Community Access</span>
+                            </div>
+                        </div>
+                        <div class="program-card__footer">
+                            <div class="program-card__price">
+                                <span class="price-original">₹50,000</span>
+                                <span class="program-card__currency">₹</span>3,999
+                            </div>
+                            <span class="price-note">🔥 Limited Time — Save ₹46,001</span>
+                            <span class="price-emi">or EMI starting at ₹999/month</span>
+                            <button onclick="selectCourse('CRT Strategy Program', 3999)" class="btn btn--outline btn--full" style="margin-top:1rem;">
+                                <span>Start Trading Profitably Today 🚀</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== STRATEGIES SECTION ===== -->
+                <div class="section-header reveal-up" style="margin-top: 5rem;">
+                    <div class="section-label">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Individual Strategies
+                    </div>
+                    <h2 class="section-title">Strategies <span class="text-gold-gradient">Covered</span></h2>
+                    <p class="section-desc">Pick a single powerful strategy or grab them all at one unbeatable price.</p>
+                </div>
+
+                <div class="strategy-cards reveal-up">
+                    <div class="strategy-card">
+                        <div class="strategy-card__icon"><i class="fa-solid fa-compass"></i></div>
+                        <div class="strategy-card__body">
+                            <h4>Market Bias &amp; Trending Strategy</h4>
+                            <p>Learn to identify bullish/bearish bias and trade strong trends with high-probability continuation setups.</p>
+                        </div>
+                        <div class="strategy-card__price">₹1,999</div>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('Market Bias &amp; Trending Strategy', 1999)" class="btn btn--outline btn--full strategy-card__btn">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Buy Now — ₹1,999</span>
+                        </button>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-card__icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="strategy-card__body">
+                            <h4>Silver Bullet Strategy</h4>
+                            <p>Time-based intraday setup for precise, high-accuracy entries at institutional price points.</p>
+                        </div>
+                        <div class="strategy-card__price">₹2,499</div>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('Silver Bullet Strategy', 2499)" class="btn btn--primary btn--full strategy-card__btn btn--glow">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Buy Now — ₹2,499</span>
+                        </button>
+                    </div>
+                    <div class="strategy-card">
+                        <div class="strategy-card__icon"><i class="fa-solid fa-water"></i></div>
+                        <div class="strategy-card__body">
+                            <h4>Order Flow Trading Strategy</h4>
+                            <p>Understand liquidity, buying/selling pressure, and smart money behavior to trade with institutions.</p>
+                        </div>
+                        <div class="strategy-card__price">₹3,999</div>
+                        <span class="price-emi">or EMI starting at ₹999/month</span>
+                        <button onclick="selectCourse('Order Flow Trading Strategy', 3999)" class="btn btn--outline btn--full strategy-card__btn">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Buy Now — ₹3,999</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ===== COMBO OFFER ===== -->
+                <div class="combo-offer-block reveal-up">
+                    <div class="combo-badge">🔥 Best Value</div>
+                    <div class="section-label" style="justify-content:center; margin-bottom:1rem;">
+                        <i class="fa-solid fa-tags"></i> Strategy Combo Offer
+                    </div>
+                    <p class="combo-equation">₹1,999 + ₹2,499 + ₹3,999 = ₹8,497</p>
+                    <div class="combo-price">₹10,000</div>
+                    <p style="color:var(--color-text-dim); margin-bottom:1.5rem; font-size:0.95rem;">Get All 3 Strategies — Combo Deal — Limited Offer 🎯</p>
+                    <button onclick="selectCourse('All Strategies Combo', 10000)" class="btn btn--primary btn--lg btn--glow">
+                        <span>Get All Strategies at ₹10,000</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <p class="price-emi" style="margin-top:0.75rem; text-align:center;">or EMI starting at ₹999/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- BONUSES SECTION                              -->
+    <!-- ============================================ -->
+    <section id="bonuses" class="bonuses">
+        <div style="max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad);">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-gift"></i>
+                    Value Stacking
+                </div>
+                <h2 class="section-title">🎁 Exclusive <span class="text-gold-gradient">Bonuses</span></h2>
+                <p class="section-desc">Enroll today and unlock bonuses worth <strong class="text-gold">₹15,000 — absolutely FREE</strong></p>
+            </div>
+            <div class="bonuses__grid">
+                <div class="bonus-card reveal-up">
+                    <div class="bonus-icon"><i class="fa-solid fa-video"></i></div>
+                    <div class="bonus-content">
+                        <h4>Live Weekly Trade Sessions</h4>
+                        <p>Join live market analysis and trade call sessions every week with the mentor.</p>
+                    </div>
+                    <span class="bonus-value">₹5,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.05s;">
+                    <div class="bonus-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <div class="bonus-content">
+                        <h4>Private Telegram Signals (1 Month Free)</h4>
+                        <p>Get real-time trade signals from the mentor for an entire month — free!</p>
+                    </div>
+                    <span class="bonus-value">₹3,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.1s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                    <div class="bonus-content">
+                        <h4>Personal Strategy PDF</h4>
+                        <p>Downloadable PDF covering all SMC setups, entry rules, and checklist.</p>
+                    </div>
+                    <span class="bonus-value">₹2,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.15s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="bonus-content">
+                        <h4>Risk Management Calculator</h4>
+                        <p>Custom Excel/Sheets calculator to manage position sizing perfectly on every trade.</p>
+                    </div>
+                    <span class="bonus-value">₹2,000</span>
+                </div>
+                <div class="bonus-card reveal-up" style="--delay:0.2s;">
+                    <div class="bonus-icon"><i class="fa-solid fa-film"></i></div>
+                    <div class="bonus-content">
+                        <h4>Recorded Trade Breakdowns</h4>
+                        <p>Access hours of post-trade analysis with real market examples from the mentor.</p>
+                    </div>
+                    <span class="bonus-value">₹3,000</span>
+                </div>
+            </div>
+            <div class="guarantee-block reveal-up">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h4>🛡️ 7 Days Money Back Guarantee — No Questions Asked</h4>
+                    <p style="font-size:0.88rem; color:var(--color-text-dim); margin-top:0.3rem;">If you're not satisfied within 7 days and have watched less than 20% of the content, we'll refund every rupee. Zero risk for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="the-edge.html" class="footer__logo">Market<span>Vision</span></a>
+                    <p class="footer__tagline">Master institutional trading. Stop being retail liquidity.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="footer__social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Programs</h4>
+                    <a href="programs.html" class="footer__link">SMC Mastery</a>
+                    <a href="programs.html" class="footer__link">CRT Strategy</a>
+                    <a href="programs.html" class="footer__link">4H Candle Range</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Company</h4>
+                    <a href="the-edge.html" class="footer__link">About Us</a>
+                    <a href="results.html" class="footer__link">Student Results</a>
+                    <a href="faq.html" class="footer__link">FAQ</a>
+                    <a href="the-edge.html#apply" class="footer__link">Apply Now</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Legal</h4>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Market Vision Education. All rights reserved.</p>
+                <p class="footer__disclaimer">Trading in financial markets involves significant risk. Past results do not guarantee future performance. This is an educational program, not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

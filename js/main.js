@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
     initTimer();
     updateUpiDisplay();
+    readCourseParams(); // Handle cross-page course pre-selection
 });
 
 // ==============================================
@@ -254,36 +255,93 @@ function closeMobileMenu() {
 // COURSE SELECTION
 // ==============================================
 function selectCourse(name, price) {
+    const applySection = document.getElementById('apply');
+
+    if (applySection) {
+        // We are on the-edge.html — scroll & select inline
+        const selectEl = document.getElementById('courseSelect');
+        if (selectEl) {
+            let matched = false;
+            for (let i = 0; i < selectEl.options.length; i++) {
+                const optVal = parseInt(selectEl.options[i].value, 10);
+                const optName = selectEl.options[i].getAttribute('data-name') || '';
+                if (optVal === price && optName.replace(/&amp;/g, '&') === name.replace(/&amp;/g, '&')) {
+                    selectEl.selectedIndex = i;
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (parseInt(selectEl.options[i].value, 10) === price) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+        currentCoursePrice = price;
+        currentCourseName  = name.replace(/&amp;/g, '&');
+        applySection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // We are on another page — navigate to the-edge.html#apply with params
+        const params = new URLSearchParams();
+        params.set('course', name);
+        params.set('price', price);
+        // Resolve path: pages/ subfolder needs to go to sibling the-edge.html
+        const isInPages = window.location.pathname.includes('/pages/');
+        const base = isInPages ? 'the-edge.html' : 'pages/the-edge.html';
+        window.location.href = `${base}#apply?${params.toString()}`;
+    }
+}
+
+// ==============================================
+// READ URL PARAMS (for cross-page course selection)
+// ==============================================
+function readCourseParams() {
+    // URL format: the-edge.html#apply?course=...&price=...
+    // We embed params after the hash to keep it anchor-friendly
+    const hash = window.location.hash; // e.g. "#apply?course=SMC+Mastery&price=5999"
+    if (!hash.includes('?')) return;
+
+    const queryPart = hash.split('?')[1];
+    const params = new URLSearchParams(queryPart);
+    const courseName = params.get('course');
+    const coursePrice = parseInt(params.get('price'), 10);
+
+    if (!courseName || !coursePrice) return;
+
     const selectEl = document.getElementById('courseSelect');
     if (!selectEl) return;
 
-    // Match by price value (most reliable) first, then by data-name
+    // Pre-select dropdown
     let matched = false;
     for (let i = 0; i < selectEl.options.length; i++) {
         const optVal = parseInt(selectEl.options[i].value, 10);
-        const optName = selectEl.options[i].getAttribute('data-name') || '';
-        // Match by both price AND approximate name (handles &amp; encoding differences)
-        if (optVal === price && optName.replace(/&amp;/g, '&') === name.replace(/&amp;/g, '&')) {
+        const optName = (selectEl.options[i].getAttribute('data-name') || '').replace(/&amp;/g, '&');
+        if (optVal === coursePrice && optName === courseName.replace(/&amp;/g, '&')) {
             selectEl.selectedIndex = i;
             matched = true;
             break;
         }
     }
-    // Fallback: match by price only
     if (!matched) {
         for (let i = 0; i < selectEl.options.length; i++) {
-            if (parseInt(selectEl.options[i].value, 10) === price) {
+            if (parseInt(selectEl.options[i].value, 10) === coursePrice) {
                 selectEl.selectedIndex = i;
                 break;
             }
         }
     }
 
-    // Pre-set currentCoursePrice and currentCourseName so payment step is ready
-    currentCoursePrice = price;
-    currentCourseName  = name.replace(/&amp;/g, '&');
+    currentCoursePrice = coursePrice;
+    currentCourseName  = courseName;
 
-    document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+    // Scroll to apply section
+    const applySection = document.getElementById('apply');
+    if (applySection) {
+        setTimeout(() => applySection.scrollIntoView({ behavior: 'smooth' }), 400);
+    }
 }
 
 // ==============================================

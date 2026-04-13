@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Market Vision FAQ — Common questions about SMC trading programs, refund policy, lesson delivery, experience requirements, and market coverage.">
+    <meta name="keywords" content="trading course FAQ, SMC program questions, refund policy, trading education FAQ">
+    <meta name="author" content="Market Vision Education">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Market Vision | FAQ">
+    <meta property="og:description" content="Common questions answered about Market Vision trading programs.">
+    <meta property="og:type" content="website">
+    <title>Market Vision | FAQ — Common Questions Answered</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav id="main-nav" class="nav">
+        <div class="nav__container">
+            <a href="the-edge.html" class="nav__logo">
+                <img src="../images/logo.png" alt="Market Vision Logo" class="nav__logo-img">
+                Market<span>Vision</span>
+            </a>
+
+            <div class="nav__links" id="nav-links">
+                <a href="the-edge.html" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
+                <a href="programs.html" class="nav__link" onclick="closeMobileMenu()">Programs</a>
+                <a href="results.html" class="nav__link" onclick="closeMobileMenu()">Results</a>
+                <a href="mentor.html" class="nav__link" onclick="closeMobileMenu()">Mentor</a>
+                <a href="faq.html" class="nav__link" onclick="closeMobileMenu()">FAQ</a>
+            </div>
+
+            <a href="the-edge.html#apply" class="nav__cta">Get Instant Access</a>
+
+            <button class="nav__hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- FAQ                                           -->
+    <!-- ============================================ -->
+    <section id="faq" class="faq">
+        <div class="faq__container">
+            <div class="section-header reveal-up">
+                <div class="section-label">
+                    <i class="fa-solid fa-circle-question"></i>
+                    FAQ
+                </div>
+                <h2 class="section-title">
+                    Common <span class="text-gold-gradient">Questions</span>
+                </h2>
+            </div>
+
+            <div class="faq__list">
+                <div class="faq__item reveal-up" style="--delay: 0s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Who is this program for?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>This program is designed for serious traders — whether you're a beginner who wants to start right, or an intermediate trader tired of losing money with retail strategies. If you're willing to put in the work and study institutional frameworks, this is for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.05s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Do I need prior trading experience?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>The 4H Candle Range program is beginner-friendly. For SMC Mastery and CRT Strategy, basic knowledge of candlestick charts and market structure is recommended but not strictly required — we cover fundamentals in the first module.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.1s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>How are lessons delivered?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>All lessons are pre-recorded HD videos accessible 24/7 on our private platform. SMC Mastery students also get weekly live trade review sessions. All programs include lifetime access to the Telegram community.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.15s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Is there a refund policy?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>We offer a 7-day refund if you've watched less than 20% of the course content and are unsatisfied. After that, all sales are final. We're confident in the value — over 89% of our students report measurable improvement.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item reveal-up" style="--delay: 0.2s;">
+                    <button class="faq__question" onclick="toggleFaq(this)">
+                        <span>Which markets does this apply to?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq__answer">
+                        <p>SMC and CRT principles apply across all liquid markets — Forex, Indian equities (NSE/BSE), commodities, crypto, and indices. The concepts are universal because they're based on how institutional order flow works.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="the-edge.html" class="footer__logo">Market<span>Vision</span></a>
+                    <p class="footer__tagline">Master institutional trading. Stop being retail liquidity.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="footer__social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Programs</h4>
+                    <a href="programs.html" class="footer__link">SMC Mastery</a>
+                    <a href="programs.html" class="footer__link">CRT Strategy</a>
+                    <a href="programs.html" class="footer__link">4H Candle Range</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Company</h4>
+                    <a href="the-edge.html" class="footer__link">About Us</a>
+                    <a href="results.html" class="footer__link">Student Results</a>
+                    <a href="faq.html" class="footer__link">FAQ</a>
+                    <a href="the-edge.html#apply" class="footer__link">Apply Now</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Legal</h4>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Market Vision Education. All rights reserved.</p>
+                <p class="footer__disclaimer">Trading in financial markets involves significant risk. Past results do not guarantee future performance. This is an educational program, not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
