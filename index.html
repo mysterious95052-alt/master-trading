@@ -2,14 +2,507 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=pages/the-edge.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Market Vision — Master Smart Money Concepts, CRT &amp; 4H Candle Range Strategy. Premium trading education for aspiring institutional-level traders.">
+    <meta name="description" content="Market Vision — Master Smart Money Concepts, CRT & 4H Candle Range Strategy. Premium trading education for aspiring institutional-level traders.">
+    <meta name="keywords" content="trading education, SMC, smart money concepts, CRT strategy, 4H candle range, forex, trading course">
     <meta name="author" content="Market Vision Education">
-    <title>Market Vision | Redirecting...</title>
+    <meta name="theme-color" content="#050508">
+    <meta property="og:title" content="Market Vision | Premium Trading Education">
+    <meta property="og:description" content="Master Smart Money Concepts. Stop being retail liquidity.">
+    <meta property="og:type" content="website">
+    <title>Market Vision | Premium Trading Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <p>Redirecting to <a href="pages/the-edge.html">Market Vision</a>...</p>
-    <script>window.location.replace("pages/the-edge.html");</script>
+
+    <!-- ============================================ -->
+    <!-- CANVAS PARTICLE BACKGROUND                    -->
+    <!-- ============================================ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                    -->
+    <!-- ============================================ -->
+    <nav id="main-nav" class="nav">
+        <div class="nav__container">
+            <a href="/" class="nav__logo">
+                <img src="images/logo.png" alt="Market Vision Logo" class="nav__logo-img">
+                Market<span>Vision</span>
+            </a>
+
+            <div class="nav__links" id="nav-links">
+                <a href="/" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
+                <a href="pages/programs.html" class="nav__link" onclick="closeMobileMenu()">Programs</a>
+                <a href="pages/results.html" class="nav__link" onclick="closeMobileMenu()">Results</a>
+                <a href="pages/mentor.html" class="nav__link" onclick="closeMobileMenu()">Mentor</a>
+                <a href="pages/faq.html" class="nav__link" onclick="closeMobileMenu()">FAQ</a>
+            </div>
+
+            <a href="#apply" class="nav__cta">Get Instant Access</a>
+
+            <button class="nav__hamburger" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION                                  -->
+    <!-- ============================================ -->
+    <section id="hero" class="hero">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+
+        <div class="hero__content">
+            <div class="hero__badge reveal-up">
+                <i class="fa-solid fa-bolt"></i>
+                <span>🔥 Limited Seats — Only 50 Left | Price Increasing Soon</span>
+            </div>
+
+            <h1 class="hero__title reveal-up" style="--delay: 0.1s;">
+                Learn How <span class="text-gold-gradient">Smart Money</span><br>
+                Trades the Market
+            </h1>
+
+            <p class="hero__subtitle reveal-up" style="--delay: 0.2s;">
+                After this course, you will be able to capture <strong>high RRR trades</strong> using Smart Money Concepts (SMC). Build a high-performance trading system and stop being retail liquidity.
+            </p>
+
+            <div class="hero__actions reveal-up" style="--delay: 0.3s;">
+                <a href="#apply" class="btn btn--primary btn--lg btn--glow">
+                    <span>Enroll in Mentorship</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="pages/programs.html" class="btn btn--glass btn--lg">
+                    <span>Get Instant Access</span>
+                </a>
+            </div>
+
+            <div class="hero__trust reveal-up" style="--delay: 0.4s;">
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Verified Mentor</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>1000+ Traders Trained</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.9/5 Rating</span>
+                </div>
+                <div class="hero__trust-divider"></div>
+                <div class="hero__trust-item">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Secure Payment</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-mouse">
+                <div class="hero__scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS BAR                                     -->
+    <!-- ============================================ -->
+    <section class="stats">
+        <div class="stats__container">
+            <div class="stat reveal-up">
+                <div class="stat__number" data-target="1000">0</div>
+                <div class="stat__suffix">+</div>
+                <div class="stat__label">Traders Trained</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.1s;">
+                <div class="stat__number" data-target="89">0</div>
+                <div class="stat__suffix">%</div>
+                <div class="stat__label">Success Rate</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.2s;">
+                <div class="stat__number" data-target="3">0</div>
+                <div class="stat__suffix">+</div>
+                <div class="stat__label">Years Teaching</div>
+            </div>
+            <div class="stat__divider"></div>
+            <div class="stat reveal-up" style="--delay: 0.3s;">
+                <div class="stat__number" data-target="15">0</div>
+                <div class="stat__suffix">K+</div>
+                <div class="stat__label">Community Members</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ABOUT / THE EDGE                              -->
+    <!-- ============================================ -->
+    <section id="about" class="about">
+        <div class="about__container">
+            <!-- Problem Side -->
+            <div class="about__problem reveal-left">
+                <div class="section-label section-label--danger">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    The Problem
+                </div>
+                <h2 class="about__title">
+                    Why Retail Traders <span class="text-danger">Fail</span>
+                </h2>
+
+                <div class="about__cards">
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-arrow-trend-down"></i>
+                        </div>
+                        <div>
+                            <h4>Stop Hunts & Losing Trades</h4>
+                            <p>Trading retail patterns puts your stops exactly where institutions need liquidity to fill their orders.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4>Lagging Indicators</h4>
+                            <p>RSI, MACD, and moving averages show you what already happened — not what smart money is planning next.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--danger">
+                        <div class="about__card-icon about__card-icon--danger">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4>Emotional Trading</h4>
+                            <p>Without a structured framework, you rely on gut feeling and repeat the same mistakes every session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Side -->
+            <div class="about__solution reveal-right">
+                <div class="section-label section-label--success">
+                    <i class="fa-solid fa-check-circle"></i>
+                    The Solution
+                </div>
+                <h2 class="about__title">
+                    Trade Like <span class="text-gold">Institutions</span>
+                </h2>
+
+                <div class="about__cards">
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-crosshairs"></i>
+                        </div>
+                        <div>
+                            <h4>Smart Money Concepts (SMC)</h4>
+                            <p>Understand order blocks, liquidity sweeps, and institutional order flow to trade with — not against — the market movers.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h4>CRT Strategy Framework</h4>
+                            <p>A systematic approach to reading candle ranges and time-based liquidity patterns for high-probability setups.</p>
+                        </div>
+                    </div>
+                    <div class="about__card about__card--gold">
+                        <div class="about__card-icon about__card-icon--gold">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4>4H Candle Range Precision</h4>
+                            <p>Master the 4-hour candle mapping technique to identify high-probability entries with tight risk management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- APPLICATION / PAYMENT                         -->
+    <!-- ============================================ -->
+    <section id="apply" class="apply">
+        <div class="apply__container">
+            <div class="section-header reveal-up">
+                <div class="scarcity-banner" style="margin-bottom:1.5rem;">
+                    <i class="fa-solid fa-users"></i>
+                    <span>⚠️ Only <strong>50 Seats</strong> Available — <strong>47 already taken!</strong></span>
+                </div>
+                <h2 class="section-title">Secure Your <span class="text-gold-gradient">Seat</span></h2>
+                <div class="apply__timer" id="urgency-timer">
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="timer-text">Offer expires in: 24:00:00</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--color-danger); font-weight:700; margin-top:0.5rem;">🔥 Price Increasing Soon — Lock In Your Discount Now!</p>
+            </div>
+
+            <div class="apply__card reveal-up" style="--delay: 0.1s;">
+                <!-- Step Tabs -->
+                <div class="apply__tabs">
+                    <div class="apply__tab apply__tab--active" id="tab-1">
+                        <span class="apply__tab-num">1</span>
+                        <span class="apply__tab-text">Your Details</span>
+                    </div>
+                    <div class="apply__tab-connector"></div>
+                    <div class="apply__tab" id="tab-2">
+                        <span class="apply__tab-num">2</span>
+                        <span class="apply__tab-text">Payment</span>
+                    </div>
+                    <div class="apply__tab-connector"></div>
+                    <div class="apply__tab" id="tab-3">
+                        <span class="apply__tab-num">3</span>
+                        <span class="apply__tab-text">Confirmation</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: User Info -->
+                <div id="step-1" class="apply__step">
+                    <form id="application-form" class="apply__form" onsubmit="processForm(event)">
+                        <div class="form-group">
+                            <label for="custName" class="form-label">Full Name</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="custName" required placeholder="e.g. Arjun Sharma" class="form-input" minlength="2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="custEmail" class="form-label">Email Address</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="custEmail" required placeholder="e.g. arjun@email.com" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="custPhone" class="form-label">WhatsApp Number</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <input type="tel" id="custPhone" required placeholder="e.g. +91 98765 43210" class="form-input" pattern="[\+]?[0-9\s\-]{10,15}" title="Enter a valid phone number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="courseSelect" class="form-label">Select Program</label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <select id="courseSelect" required class="form-input form-select">
+                                    <option value="5999" data-name="SMC Mastery Program">🔥 SMC Mastery (Most Popular) — ₹5,999</option>
+                                    <option value="10000" data-name="All Strategies Combo">🏆 All Strategies Combo (Best Value) — ₹10,000</option>
+                                    <option value="3999" data-name="CRT Strategy Program">CRT Strategy — ₹3,999</option>
+                                    <option value="2499" data-name="4H Candle Range Strategy">4H Candle Range (Beginners) — ₹2,499</option>
+                                    <option value="1999" data-name="Market Bias & Trending Strategy">Market Bias &amp; Trending Strategy — ₹1,999</option>
+                                    <option value="2499" data-name="Silver Bullet Strategy">Silver Bullet Strategy — ₹2,499</option>
+                                    <option value="3999" data-name="Order Flow Trading Strategy">Order Flow Trading Strategy — ₹3,999</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full btn--lg btn--glow" id="proceed-btn">
+                            <span>Get Instant Access 🚀</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <div class="trust-badges">
+                            <span class="trust-badge"><i class="fa-solid fa-shield-halved"></i> Secure Payment</span>
+                            <span class="trust-badge"><i class="fa-solid fa-lock"></i> 256-bit Encrypted</span>
+                            <span class="trust-badge"><i class="fa-solid fa-rotate-left"></i> 7-Day Refund</span>
+                            <span class="trust-badge"><i class="fa-brands fa-google-pay"></i> UPI / Cards</span>
+                        </div>
+                        <p class="apply__note">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Your information is encrypted and never shared.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Step 2: Payment Methods -->
+                <div id="step-2" class="apply__step apply__step--hidden">
+                    <div class="apply__summary">
+                        <div class="apply__summary-left">
+                            <span class="apply__summary-label">Course</span>
+                            <span class="apply__summary-value" id="summary-course">SMC Mastery</span>
+                        </div>
+                        <div class="apply__summary-right">
+                            <span class="apply__summary-label">Amount</span>
+                            <span class="apply__summary-price" id="summary-price">₹5,999</span>
+                        </div>
+                    </div>
+                    <button onclick="switchTab(2, 1)" class="btn btn--ghost apply__back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Back to Details</span>
+                    </button>
+                    <h4 class="apply__payment-heading">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        Fast UPI (Mobile Only)
+                    </h4>
+                    <div class="apply__upi-grid">
+                        <button onclick="triggerMobileUPI('gpay')" class="apply__upi-btn" id="btn-gpay">
+                            <div class="apply__upi-icon" style="background: #1a73e8;">
+                                <i class="fa-brands fa-google-pay" style="font-size: 1.4rem;"></i>
+                            </div>
+                            <span>Google Pay</span>
+                        </button>
+                        <button onclick="triggerMobileUPI('phonepe')" class="apply__upi-btn" id="btn-phonepe">
+                            <div class="apply__upi-icon" style="background: #5f259f;">
+                                <i class="fa-solid fa-p" style="font-size: 1.1rem;"></i>
+                            </div>
+                            <span>PhonePe</span>
+                        </button>
+                        <button onclick="triggerMobileUPI('paytm')" class="apply__upi-btn" id="btn-paytm">
+                            <div class="apply__upi-icon" style="background: #00baf2;">
+                                <i class="fa-solid fa-wallet" style="font-size: 1.1rem;"></i>
+                            </div>
+                            <span>Paytm</span>
+                        </button>
+                    </div>
+                    <h4 class="apply__payment-heading" style="margin-top: 1.5rem;">
+                        <i class="fa-regular fa-credit-card"></i>
+                        Credit Card / EMI Option
+                    </h4>
+                    <button onclick="triggerEMI()" class="apply__qr-toggle" id="emi-toggle-btn" style="margin-bottom: 1.5rem; text-align: left;">
+                        <div class="apply__qr-toggle-left">
+                            <div class="apply__qr-toggle-icon" style="background: rgba(212, 175, 55, 0.1); color: var(--color-gold);">
+                                <i class="fa-solid fa-percent"></i>
+                            </div>
+                            <div>
+                                <div class="apply__qr-toggle-title">Pay via EMI starting at ₹999/month</div>
+                                <div class="apply__qr-toggle-sub">Available on all major Credit Cards</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right apply__qr-chevron" style="color: var(--color-gold);"></i>
+                    </button>
+                    <h4 class="apply__payment-heading">
+                        <i class="fa-solid fa-desktop"></i>
+                        Desktop / QR Scanner
+                    </h4>
+                    <button onclick="toggleScanner()" class="apply__qr-toggle" id="qr-toggle-btn">
+                        <div class="apply__qr-toggle-left">
+                            <div class="apply__qr-toggle-icon">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                            <div>
+                                <div class="apply__qr-toggle-title">Scan QR Code</div>
+                                <div class="apply__qr-toggle-sub">Pay using any UPI app</div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down apply__qr-chevron" id="qr-chevron"></i>
+                    </button>
+                    <div id="qr-section" class="apply__qr-section apply__step--hidden">
+                        <p class="apply__qr-instruction">Scan this QR code to pay <strong class="text-gold">₹<span class="qr-price-text">5,999</span></strong></p>
+                        <div class="apply__qr-wrapper">
+                            <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=marketvision@okhdfc%26pn=Market%20Vision%26cu=INR" alt="Payment QR Code" width="200" height="200">
+                        </div>
+                        <div class="apply__upi-manual">
+                            <span class="apply__upi-manual-label">Manual UPI ID</span>
+                            <div class="apply__upi-manual-row">
+                                <code id="merchant-upi-display" class="apply__upi-id">marketvision@okhdfc</code>
+                                <button onclick="copyUpi()" class="apply__upi-copy" id="copy-upi-btn">
+                                    <i class="fa-regular fa-copy"></i>
+                                    <span id="copy-text">Copy</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button onclick="checkPaymentStatus()" class="btn btn--primary btn--full" id="check-payment-btn">
+                            <i class="fa-solid fa-rotate"></i>
+                            <span>I have paid — check status</span>
+                        </button>
+                    </div>
+                    <div class="apply__secure">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Secure 256-bit encrypted transaction</span>
+                    </div>
+                </div>
+
+                <!-- Step 3: Success -->
+                <div id="step-3" class="apply__step apply__step--hidden">
+                    <div class="apply__success">
+                        <div class="apply__success-icon">
+                            <div class="apply__success-ring"></div>
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h2 class="apply__success-title">Payment Successful!</h2>
+                        <p class="apply__success-text">Your enrollment is confirmed. A confirmation email with all the details has been sent to your inbox.</p>
+                        <div class="apply__success-details">
+                            <div class="apply__success-detail">
+                                <span>Course</span>
+                                <strong id="confirm-course">SMC Mastery Program</strong>
+                            </div>
+                            <div class="apply__success-detail">
+                                <span>Amount Paid</span>
+                                <strong id="confirm-amount" class="text-gold">₹5,999</strong>
+                            </div>
+                            <div class="apply__success-detail">
+                                <span>Status</span>
+                                <strong class="text-success">Confirmed</strong>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/919521233022?text=Hi%2C%20I%20just%20enrolled!" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--full btn--lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Join Premium Community</span>
+                        </a>
+                        <p class="apply__success-note">You'll be added to the premium Telegram group within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                        -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo">Market<span>Vision</span></a>
+                    <p class="footer__tagline">Master institutional trading. Stop being retail liquidity.</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" class="footer__social" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="footer__social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer__social" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Programs</h4>
+                    <a href="pages/programs.html" class="footer__link">SMC Mastery</a>
+                    <a href="pages/programs.html" class="footer__link">CRT Strategy</a>
+                    <a href="pages/programs.html" class="footer__link">4H Candle Range</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Company</h4>
+                    <a href="/" class="footer__link">About Us</a>
+                    <a href="pages/results.html" class="footer__link">Student Results</a>
+                    <a href="pages/faq.html" class="footer__link">FAQ</a>
+                    <a href="#apply" class="footer__link">Apply Now</a>
+                </div>
+                <div class="footer__links-group">
+                    <h4 class="footer__links-title">Legal</h4>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                    <a href="#" class="footer__link">Terms of Service</a>
+                    <a href="#" class="footer__link">Refund Policy</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Market Vision Education. All rights reserved.</p>
+                <p class="footer__disclaimer">Trading in financial markets involves significant risk. Past results do not guarantee future performance. This is an educational program, not financial advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
