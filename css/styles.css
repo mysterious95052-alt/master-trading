@@ -386,7 +386,14 @@ input, select, textarea {
     color: var(--color-text);
 }
 
-.nav__link:hover::after {
+.nav__link.active {
+    color: var(--color-gold);
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
     width: 100%;
 }
 

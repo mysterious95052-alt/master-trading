@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavScroll();
     initCounters();
     initTimer();
+    initActiveNav();
     updateUpiDisplay();
     readCourseParams(); // Handle cross-page course pre-selection
 });
@@ -253,6 +254,21 @@ function closeMobileMenu() {
         btn.classList.remove('active');
         document.body.style.overflow = '';
     }, 50);
+}
+
+// ==============================================
+// ACTIVE NAVIGATION — highlight current page, prevent reload
+// ==============================================
+function initActiveNav() {
+    const navLinks = document.querySelectorAll('.nav__link');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop() || 'index.html';
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
 }
 
 // ==============================================
