@@ -292,10 +292,10 @@ function selectCourse(name, price) {
         const params = new URLSearchParams();
         params.set('course', name);
         params.set('price', price);
-        // Resolve path: pages/ subfolder needs to go to sibling the-edge.html
+        // Resolve path: we need to go to apply.html
         const isInPages = window.location.pathname.includes('/pages/');
-        const base = isInPages ? 'the-edge.html' : 'pages/the-edge.html';
-        window.location.href = `${base}#apply?${params.toString()}`;
+        const base = isInPages ? 'apply.html' : 'pages/apply.html';
+        window.location.href = `${base}?${params.toString()}`;
     }
 }
 
@@ -303,13 +303,11 @@ function selectCourse(name, price) {
 // READ URL PARAMS (for cross-page course selection)
 // ==============================================
 function readCourseParams() {
-    // URL format: the-edge.html#apply?course=...&price=...
-    // We embed params after the hash to keep it anchor-friendly
-    const hash = window.location.hash; // e.g. "#apply?course=SMC+Mastery&price=5999"
-    if (!hash.includes('?')) return;
+    // URL format: apply.html?course=...&price=...
+    const queryString = window.location.search; 
+    if (!queryString) return;
 
-    const queryPart = hash.split('?')[1];
-    const params = new URLSearchParams(queryPart);
+    const params = new URLSearchParams(queryString);
     const courseName = params.get('course');
     const coursePrice = parseInt(params.get('price'), 10);
 
