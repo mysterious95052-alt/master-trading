@@ -13,8 +13,9 @@
     <title>Market Vision | Results — Student Testimonials & Wins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -26,13 +27,13 @@
     <!-- ============================================ -->
     <nav id="main-nav" class="nav">
         <div class="nav__container">
-            <a href="the-edge.html" class="nav__logo">
-                <img src="../images/logo.png" alt="Market Vision Logo" class="nav__logo-img">
+            <a href="/" class="nav__logo">
+                <img src="../images/logo.png" alt="Market Vision Logo" class="nav__logo-img" width="32" height="32" loading="eager">
                 Market<span>Vision</span>
             </a>
 
             <div class="nav__links" id="nav-links">
-                <a href="the-edge.html" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
+                <a href="/" class="nav__link" onclick="closeMobileMenu()">The Edge</a>
                 <a href="programs.html" class="nav__link" onclick="closeMobileMenu()">Programs</a>
                 <a href="results.html" class="nav__link" onclick="closeMobileMenu()">Results</a>
                 <a href="mentor.html" class="nav__link" onclick="closeMobileMenu()">Mentor</a>
@@ -148,7 +149,7 @@
         <div class="footer__container">
             <div class="footer__top">
                 <div class="footer__brand">
-                    <a href="the-edge.html" class="footer__logo">Market<span>Vision</span></a>
+                    <a href="/" class="footer__logo">Market<span>Vision</span></a>
                     <p class="footer__tagline">Master institutional trading. Stop being retail liquidity.</p>
                     <div class="footer__socials">
                         <a href="#" class="footer__social" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
@@ -165,7 +166,7 @@
                 </div>
                 <div class="footer__links-group">
                     <h4 class="footer__links-title">Company</h4>
-                    <a href="the-edge.html" class="footer__link">About Us</a>
+                    <a href="/" class="footer__link">About Us</a>
                     <a href="results.html" class="footer__link">Student Results</a>
                     <a href="faq.html" class="footer__link">FAQ</a>
                     <a href="apply.html" class="footer__link">Apply Now</a>
@@ -184,6 +185,6 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>
